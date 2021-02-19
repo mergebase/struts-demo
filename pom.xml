@@ -30,7 +30,8 @@
         <version>2.5.8</version>
     </parent>
 
-    <artifactId>struts2-showcase</artifactId>
+    <groupId>com.mergebase</groupId>
+    <artifactId>struts-demo</artifactId>
     <packaging>war</packaging>
     <name>Struts 2 Showcase Webapp</name>
 
@@ -46,6 +47,15 @@
         </profile>
     </profiles>
     <dependencies>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.27.Final</version>
+            <scope>import</scope>
+            <type>pom</type>
+        </dependency>
+
 
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -82,6 +92,7 @@
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-tiles-plugin</artifactId>
+            <version>2.5.8</version>
         </dependency>
 
         <dependency>
@@ -217,6 +228,11 @@
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.5.25</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -275,4 +291,13 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
